@@ -22,12 +22,10 @@ lib/
 │   └── utils/           # Responsive design and utilities
 ├── features/
 │   ├── auth/           # Authentication feature
-│   │   ├── models/     
-│   │   └── presentation/
+│   │   └── pages/
 │   └── home/           # Home feature with news articles
-│       ├── models/     
-│       ├── presentation/
-│       └── widgets/    
+│       ├── models/
+│       └── widgets/
 ```
 
 ## Getting Started
@@ -42,21 +40,25 @@ lib/
 ### Installation
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/Rapheal555/mvvm-take-home-test-rapheal.git
 ```
 
 2. Navigate to the project directory:
+
 ```bash
 cd mvvm-take-home-test-rapheal
 ```
 
 3. Install dependencies:
+
 ```bash
 flutter pub get
 ```
 
 4. Generate build files:
+
 ```bash
 dart pub run build_runner build --delete-conflicting-outputs
 ```
@@ -64,6 +66,7 @@ dart pub run build_runner build --delete-conflicting-outputs
 ### Build and Run
 
 #### Quick Start Script (build.sh)
+
 ```bash
 #!/bin/bash
 
@@ -88,6 +91,7 @@ flutter run
 ```
 
 To use the script:
+
 1. Save it as `build.sh` in your project root
 2. Make it executable: `chmod +x build.sh`
 3. Run it: `./build.sh`
@@ -97,6 +101,7 @@ To use the script:
 ### Core Components
 
 1. **API Service** (`lib/core/network/api_service.dart`)
+
    - Handles all network requests
    - Implements error handling and response parsing
 
@@ -107,6 +112,7 @@ To use the script:
 ### Features
 
 1. **Authentication** (`lib/features/auth/`)
+
    - Login page implementation
    - Authentication state management
    - Form validation
@@ -119,6 +125,7 @@ To use the script:
 ### Key Widgets
 
 1. **Sidebar** (`lib/features/home/widgets/sidebar.dart`)
+
    - Responsive navigation drawer
    - Handles both mobile and desktop layouts
    - Implements proper gesture handling for mobile view
@@ -131,11 +138,13 @@ To use the script:
 ## Architecture Decisions
 
 1. **MVVM Pattern**
+
    - Clear separation of concerns
    - Better testability
    - Improved maintainability
 
 2. **Responsive Design**
+
    - Single codebase for mobile and desktop
    - Adaptive layouts using `Responsive` utility
    - Consistent user experience across devices
@@ -147,6 +156,7 @@ To use the script:
 ## Testing
 
 Run tests using:
+
 ```bash
 flutter test
 ```
